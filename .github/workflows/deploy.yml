@@ -26,6 +26,10 @@ jobs:
       - name: Create Deployment ZIP
         run: zip -r deploy.zip . -x "*.git*"
 
+      - name: Wait a few seconds before deploying
+        run: sleep 10
+
+
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
         with:
