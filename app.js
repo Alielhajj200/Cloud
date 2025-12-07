@@ -22,3 +22,4 @@ mongoose.connect(mongoURI) // remove options
 app.listen(process.env.PORT || 5000 , () => {
     console.log('server running on port 5000')
 })
+ 
