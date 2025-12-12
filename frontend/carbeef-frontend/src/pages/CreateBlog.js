@@ -11,7 +11,7 @@ function CreateBlog() {
     e.preventDefault();
     setSuccess("");
 
-    const response = await fetch("http://localhost:5000/api/blogs", {
+    const response = await fetch(`${process.env.REACT_APP_API_URL}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, text, image }),

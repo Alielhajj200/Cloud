@@ -7,7 +7,7 @@ function BlogDetails() {
   const [blog, setBlog] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/blogs/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/${id}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [id]);

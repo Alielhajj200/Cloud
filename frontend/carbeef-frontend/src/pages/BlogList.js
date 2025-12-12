@@ -6,7 +6,7 @@ function BlogList() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/blogs")
+    fetch(`${process.env.REACT_APP_API_URL}`)
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
@@ -18,7 +18,7 @@ function BlogList() {
       <div style={styles.container}>
         <h2>All Blogs</h2>
 
-        <div style={styles.list}>
+        <div style={styles.list}> 
           {blogs.map((blog) => (
             <Link
               to={`/blogs/${blog._id}`}
