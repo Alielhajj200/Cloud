@@ -25,7 +25,7 @@ function BlogDetails() {
           <h2>{blog.title}</h2>
           <p>{blog.text}</p>
         </div>
-      </div>
+      </div> 
     </>
   );
 }
